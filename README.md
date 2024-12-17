@@ -42,6 +42,8 @@ X5O!P%@AP[4\PZX54(P^)7CC)7}$EICAR-STANDARD-ANTIVIRUS-TEST-FILE!$H+H*
 analyst@4fb6d613b6b0:-$ cat file2.txt
 X5O!P%@AP[4\PZX54(P^)7CC)7}$EICAR-STANDARD-ANTIVIRUS-TEST-FILE!$H+H*
 ```
+![image](https://github.com/user-attachments/assets/f41c8ed3-eb78-417f-8119-699919af8630)
+
 
 Although the contents of both files appear identical when you use the cat command, you need to generate the hash for each file to determine if the files are actually different.
 
@@ -62,6 +64,8 @@ analyst@4fb6d613b6b0:-$ sha256sum file1.txt
 analyst@4fb6d613b6b0:-$ sha256sum file2.txt
 2558ba9a4cad1e69804ce03aa2a029526179a91a5e38cb723320e83af9ca017b  file2.txt
 ```
+![image](https://github.com/user-attachments/assets/04a4939f-31e8-43fe-a4ed-754608d16cba)
+
 
 ### Task 2. Compare hashes
 In this task, you’ll write the hashes to two separate files and then compare them to find the difference.
@@ -85,6 +89,9 @@ You can manually display and compare the differences.
 
 Inspect the output and note the difference in the hash values.
 
+![image](https://github.com/user-attachments/assets/d2686065-f867-4fa9-b1cb-b954daae833e)
+
+
 Now, you can use the `cmp` command to compare the two files byte by byte. If a difference is found, the command reports the byte and line number where the first difference is found.
 
 4. Use the `cmp` command to highlight the differences in the `file1hash` and `file2hash` files:
@@ -97,6 +104,9 @@ Review the output, which reports the first difference between the two files:
 analyst@4fb6d613b6b0:-$ cmp file1hash file2hash
 file1hash file2hash differ: char1, line 1
 ```
+
+![image](https://github.com/user-attachments/assets/04344a3c-a2e1-4186-8c4d-29050bfe35c7)
+
 
 ### Conclusion
 
